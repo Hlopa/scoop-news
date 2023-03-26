@@ -1,0 +1,150 @@
+html {
+  box-sizing: border-box;
+  font-family: "Urbanist", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  color: $black;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  height: 100%;
+}
+
+h1, h2,h3,h4,h5,h6{
+  margin: 0px;
+}
+
+ul,
+li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  color: $black;
+}
+
+button {
+  cursor: pointer;
+}
+
+section {
+  overflow: hidden;
+}
+
+//=======================container======================//
+
+.g-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.g-container {
+  max-width: 1392px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+@media (max-width: 1000px) {
+  .g-container {
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 550px) {
+  .g-container {
+    padding: 0 16px;
+  }
+}
+
+//=========================btn======================//
+
+.g-main-btn {
+  background-color: $yellow;
+  color: $black;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid $grayLight;
+  user-select: none;
+  font-weight: 700;
+  font-family: "Urbanist", sans-serif;
+  padding-left: 16px;
+  padding-right: 16px;
+  transition: all 0.3s;
+  &:hover,
+  &:focus {
+    background-color: darken($yellow, 10%);
+  }
+  &:active {
+    background-color: darken($yellow, 20%);
+  }
+}
+
+//==========================input=======================//
+
+.g-search-input {
+  background: #ffffff;
+  border: 1px solid #ededed;
+  border-radius: 12px;
+  overflow: hidden;
+  padding-left: 12px;
+  input {
+    border: none;
+    &:focus,
+    &:focus-visible {
+      outline: none;
+    }
+  }
+  button {
+    background-color: #ffffff;
+    border: none;
+    height: 38px;
+    padding-right: 12px;
+    i {
+      color: $gray;
+    }
+  }
+}
+
+//====================select===================//
+
+.g-select {
+  cursor: pointer;
+  background-color: transparent;
+  border: 1px solid $violetLight;
+  border-radius: 8px;
+  padding: 8px 10px 8px 12px;
+  color: $black;
+  font-weight: 600;
+  -webkit-appearance: none;
+  position: relative;
+  -moz-appearance: none;
+  background-image: url('../images/arrow-down.svg');
+  background-repeat: no-repeat;
+  background-position-x: 90%;
+  background-position-y: 50%;
+  transition: all 0.5s;
+  &:hover, &:focus{
+    background-color: #fff ;
+  }
+}

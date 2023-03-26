@@ -1,0 +1,31 @@
+.header{
+  background-color: $bgColor;
+  flex: 0 0 auto;
+}
+
+.header__inner{
+  padding-top: 16px;
+  padding-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-action__navigation{
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.header-action__menu{
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  a{
+    color: $grayDark;
+    transition: all 0.3s;
+    &:hover{
+      color: $black;
+    }
+  }
+}

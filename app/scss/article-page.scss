@@ -1,0 +1,25 @@
+.article-page{
+  background-color: $bgColor;
+  flex: 1 0 auto;
+  padding-top: 16px;
+  padding-bottom: 60px;
+}
+
+.article-container{
+  max-width: 1012px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+
+@media (max-width: 1000px) {
+  .article-container {
+    padding: 0 24px;
+  }
+}
+
+@media (max-width: 550px) {
+  .article-container {
+    padding: 0 16px;
+  }
+}

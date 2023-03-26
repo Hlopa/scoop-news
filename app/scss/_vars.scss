@@ -1,0 +1,16 @@
+$black: #070320;
+$grayDark: #454452;
+$grayMid: #9D9CA7;
+$gray: #B2B1B7;
+$grayLight: #EDEDED;
+$bgColor: #F9F8FE;
+
+$blue: #5D84CB;
+$violetLight: #E9E7F9;
+$yellow: #F9F2CE;
+
+@mixin back-pos {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}

@@ -1,0 +1,239 @@
+.article {
+  background-color: #fff;
+  border-radius: 24px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04);
+  padding: 24px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.article--short {
+  padding: 16px;
+  gap: 16px;
+}
+
+.article__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.article__logo {
+  height: 16px;
+  img {
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.article__data-info {
+  display: flex;
+  align-items: center;
+}
+
+.article__data-info-item {
+  display: flex;
+  align-items: center;
+  user-select: none;
+  i {
+    padding-right: 7px;
+    color: $grayMid;
+  }
+  p {
+    color: $grayMid;
+    font-family: "Jost", sans-serif;
+    font-weight: 500;
+  }
+}
+
+.article__data-info-item:not(:first-child) {
+  padding-left: 12px;
+  margin-left: 12px;
+  position: relative;
+  &::before {
+    content: "";
+    width: 1px;
+    height: 80%;
+    background-color: #e5e5e5;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0px;
+    position: absolute;
+  }
+}
+
+.article__title {
+  font-family: "Manrope", sans-serif;
+  font-size: 32px;
+  line-height: 125%;
+  margin-bottom: 16px;
+}
+
+.article__title--short {
+  margin-bottom: 8px;
+  font-size: 24px;
+  line-height: 133%;
+}
+
+.article__descr {
+  font-family: "Manrope", sans-serif;
+  color: #4e4c5a;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.article__descr--short {
+  font-size: 14px;
+  line-height: 157%;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  font-weight: 500;
+  margin-bottom: 0px;
+}
+
+.article__img {
+  height: 400px;
+  img {
+    height: 100%;
+    width: 100%;
+    border-radius: 16px;
+    overflow: hidden;
+    object-fit: cover;
+  }
+}
+
+.article__img-descr {
+  text-align: center;
+  margin-top: 8px;
+  color: #4e4c5a;
+  font-size: 12px;
+  font-family: "Manrope", sans-serif;
+}
+
+.article__img--short {
+  height: 256px;
+}
+
+.article__footer-short {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.article__footer-short-tags {
+  display: flex;
+  gap: 3px;
+}
+
+.footer-short__tag {
+  background-color: #dce7fa;
+  border-radius: 24px;
+  color: #6a6973;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 120%;
+  padding: 4px 8px;
+}
+
+.footer-short__number {
+  background-color: #f1f4fa;
+}
+
+.article__tags {
+  display: flex;
+  gap: 3px;
+}
+
+.article__tag {
+  background-color: $blue;
+  border-radius: 24px;
+  color: #fff;
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 120%;
+  padding: 4px 8px;
+  border: 1px solid $blue;
+  font-family: "Urbanist", sans-serif;
+  padding-right: 24px;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 8.5px;
+    height: 8.5px;
+    background-image: url("../images/plus.svg");
+    background-repeat: no-repeat;
+    top: 45%;
+    transform: translateY(-50%);
+    right: 10px;
+  }
+}
+
+.article__tag--chosen {
+  border: 1px solid #efefef;
+  background-color: #fff;
+  color: #6a6973;
+  &::after {
+    top: 55%;
+    background-image: url("../images/check.svg");
+  }
+}
+
+.article__content {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.article__text-block{
+  p{
+    font-family: "Manrope", sans-serif;
+    color: #4E4C5A;
+    font-size: 16px;
+    line-height: 150%;
+    margin-top: 8px;
+  }
+
+}
+
+.article__text-block-title {
+  font-family: "Manrope", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 135%;
+}
+
+.article__footer{
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.article__footer-left{
+  display: flex;
+  align-items: center;
+  gap: 21px;
+}
+
+.article__data-info-item--action{
+cursor: pointer;
+}
+
+.article__data-info-item--chosen{
+  .ui_heart{
+    color: #ed1e2c;
+  }
+  .hearts{
+    color: #ed1e2c;
+  }
+
+  .ui_save{
+    color: orange;
+  }
+}

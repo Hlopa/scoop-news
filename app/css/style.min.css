@@ -366,7 +366,7 @@ button {
           user-select: none;
   padding-left: 12px;
   padding-right: 12px;
-  color: #6A6973;
+  color: #6a6973;
   -webkit-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
@@ -414,6 +414,50 @@ button {
   gap: 16px;
 }
 
+@media (max-width: 1300px) {
+  .main__content {
+    -ms-flex-preferred-size: 75%;
+        flex-basis: 75%;
+  }
+  .main__filters {
+    -ms-flex-preferred-size: 35%;
+        flex-basis: 35%;
+  }
+  .main__inner {
+    gap: 16px;
+  }
+}
+@media (max-width: 1000px) {
+  .main__content {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .main__filters {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    padding-top: 32px;
+  }
+  .main__inner {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 40px;
+  }
+  .articles {
+    gap: 32px;
+  }
+}
+@media (max-width: 570px) {
+  .article__footer-short {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 10px;
+    -webkit-box-align: start !important;
+        -ms-flex-align: start !important;
+            align-items: flex-start !important;
+  }
+}
 .article-page {
   background-color: #F9F8FE;
   -webkit-box-flex: 1;
@@ -625,6 +669,8 @@ button {
   display: -ms-flexbox;
   display: flex;
   gap: 3px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .article__tag {
@@ -727,6 +773,31 @@ button {
   color: orange;
 }
 
+@media (max-width: 800px) {
+  .article__tags {
+    gap: 6px;
+  }
+}
+@media (max-width: 650px) {
+  .article__footer {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    gap: 16px;
+  }
+}
+@media (max-width: 370px) {
+  .article__footer-left {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
 .landing-main {
   background-color: #F9F8FE;
   -webkit-box-flex: 1;

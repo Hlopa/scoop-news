@@ -147,6 +147,7 @@
 .article__tags {
   display: flex;
   gap: 3px;
+  flex-wrap: wrap;
 }
 
 .article__tag {
@@ -237,3 +238,25 @@ cursor: pointer;
     color: orange;
   }
 }
+
+
+@media (max-width: 800px) {
+  .article__tags{
+    gap: 6px
+  }
+ }
+
+ @media (max-width: 650px) {
+ .article__footer{
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+  gap: 16px
+ }
+ }
+
+ @media (max-width: 370px) {
+  .article__footer-left{
+    flex-wrap: wrap;
+  }
+  }

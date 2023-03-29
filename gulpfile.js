@@ -1,13 +1,13 @@
-const { src, dest, watch, parallel, series  } = require("gulp"),
+const { src, dest, watch, parallel, series } = require("gulp"),
   scss = require("gulp-sass")(require("sass")),
   concat = require("gulp-concat"),
   uglify = require("gulp-uglify-es").default,
   browserSync = require("browser-sync").create(),
   autoprefixer = require("gulp-autoprefixer"),
-  clean = require('gulp-clean'),
-  webphtml = require('gulp-webp-html'),
-  webp = require('gulp-webp'),   
-  imagemin = require('gulp-imagemin');
+  clean = require("gulp-clean"),
+  webphtml = require("gulp-webp-html"),
+  webp = require("gulp-webp"),
+  imagemin = require("gulp-imagemin");
 
 function style() {
   return src("app/scss/style.scss")
@@ -24,7 +24,7 @@ function style() {
 }
 
 function stylelib() {
-  return src(["node_modules/normalize.css/normalize.css"])
+  return src(["node_modules/normalize.css/normalize.css", "node_modules/animate.css/animate.css"])
     .pipe(concat("libs.min.css"))
     .pipe(scss({ outputStyle: "compressed" }))
     .pipe(dest("app/css"));
@@ -39,16 +39,17 @@ function js() {
 }
 
 function images() {
-  return src('app/images/**/*')
-      .pipe(webp({
-          quality: 80
-      }))
-      .pipe(dest('dist/images'))
-      .pipe(src('app/images/**/*'))
-      .pipe(imagemin())
-      .pipe(dest('dist/images'))
+  return src("app/images/**/*")
+    .pipe(
+      webp({
+        quality: 80,
+      })
+    )
+    .pipe(dest("dist/images"))
+    .pipe(src("app/images/**/*"))
+    .pipe(imagemin())
+    .pipe(dest("dist/images"));
 }
-
 
 // function jslib() {
 //   return src([
@@ -75,24 +76,25 @@ function watching() {
 }
 
 function buildhtml() {
-  return src('app/*.html')
-      .pipe(webphtml())
-      .pipe(dest('dist'))
+  return src("app/*.html").pipe(webphtml()).pipe(dest("dist"));
 }
 
 function build() {
-  return src([
-      'app/css/libs.min.css',
-      'app/css/style.min.css',
+  return src(
+    [
+      "app/css/libs.min.css",
+      "app/css/style.min.css",
       // 'app/js/libs.min.js',
-      'app/js/main.min.js',
-      'app/fonts/**/*',
-  ], { base: 'app' })  //чтобы в дист были такие же папки
-      .pipe(dest('dist'))
+      "app/js/main.min.js",
+      "app/fonts/**/*",
+    ],
+    { base: "app" }
+  ) //чтобы в дист были такие же папки
+    .pipe(dest("dist"));
 }
 
 function cleanDist() {
-  return src('dist').pipe(clean())
+  return src("dist").pipe(clean());
 }
 
 exports.style = style;
